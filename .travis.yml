@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- '10'
+install:
+- yarn install
+script:
+- yarn build
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: src/.vuepress/dist
+  github-token: "$GITHUB_TOKEN"
+  repo: techspiritmallorca/web
+  keep-history: true
+  on:
+    branch: master
+env:
+  global:
+    secure: oqGJUz9ZbXWGUBj3Qb4GTu/f1yi0LfhCGeFS1OgbQ/X7RDCe9A1SroVMD/0pWTd6aApy8/0MGrz34UD/E0Z/xB43dEBzfYsDp9fZa4/OieOqu6meFeoYDWNBsEtWzadvFpOYRWyvVCzLxSRV9RUMMS611YioNGeUawVVc0uW+84Vd7WtuUrwPLqVgv3x/nHppN/3rlmWTVtcfIhZJftSge0c/a9Jdvtvck6j/mf+WmkM9YQ0VtQuOWCki87Q95rtgcCisiXJa3UJnooRHWqfkzcLEcT/Zwy0crc9NKzeMJadElGHeWRvo2ddXCq5DOWRC/BCnlXXhjiLYmcl7TauA2XpX7DqEz9VSauU3teHcBLg3H4KJqn5w4gp5HyNKFI2OVSpitvFxcoGZfbhWMAuosDwUfyiUcohyW4SCM2R5BhB03NVgDgT9dDaYCdjE0e3mYb6IvQ6xEfOHDc3L9fQPofT1FDxAA0GTMfNeVd6R5PctMt5wV7OeS0rbUqncoXJ/vN4M61Crcv6umrrDsr4UVyW7QBf4O1m8Y2MyJIguVaUvdMgkvS7e3Iyd0WoQH51WL+OncI6hY34qnhsUZJOOvbjLNav7B9u3qWX3ln/wSU+JqkQRKZhTGMfDd+ld/BTM+1CDeX/qCjIlgCvnWV0I46KU8lRwA57EPN4osF3HV4=
