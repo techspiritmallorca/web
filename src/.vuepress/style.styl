@@ -1,0 +1,36 @@
+@require '~vuepress/lib/default-theme/styles/config'
+
+html, body , .navbar, .sidebar, .theme-container .navbar, .theme-container .sidebar, .navbar .links
+  background-color: $backgroundColor
+
+.theme-container .search-box input, .theme-container .search-box .suggestion a
+  color: $accentColor
+
+div[class*="language-"]
+  border-radius: $borderRadius
+
+img[src*="#rounded"]
+  border-radius: $borderRadius
+  border 1px solid darken($borderColor, 10%)
+
+ul > li
+  margin-bottom: 10px
+
+body
+  text-align: justify
+
+.container-responsive
+  position: relative
+  overflow: hidden
+  top: 0
+  left: 0
+  padding-top: 56.25%
+
+.container-responsive iframe
+  position: absolute
+  max-height: 300px
+  top: 0
+  left: 0
+  border: 0
+  height: 100%
+  width: 100%

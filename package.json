@@ -1,0 +1,32 @@
+{
+  "name": "techspirit-web",
+  "version": "0.1.0",
+  "description": "Techspirit website",
+  "scripts": {
+    "dev": "node_modules/.bin/vuepress dev src",
+    "build": "node_modules/.bin/vuepress build src"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "techspirit",
+    "mallorca",
+    "tech",
+    "talks",
+    "comunity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "vuepress": "^0.14.2"
+  },
+  "dependencies": {
+  }
+}
